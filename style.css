@@ -1,0 +1,295 @@
+@font-face {
+  font-family: Tesla;
+  src: url(ttf/TESLA.ttf);
+}
+
+@font-face {
+  font-family: "The Bold Font";
+  src: url(ttf/THEBOLDFONT.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 20px;
+}
+
+body {
+  font-family: "Inter", Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px 4fr;
+  grid-template-rows: 180px 5fr;
+}
+
+.sidebar {
+  background-color: #dafffb;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  padding: 1.5em;
+  color: #001c30;
+}
+
+.logo-container,
+.sidebar-links-container > div {
+  margin-bottom: 2em;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  display: flex;
+  gap: 1em;
+  padding: 0.5em;
+  font-size: 1.3em;
+  font-family: "The Bold Font";
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #64ccc5;
+}
+
+.logo-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-container p {
+  font-size: 2.5rem;
+  font-family: Tesla;
+}
+
+.logo {
+  width: 3em;
+}
+
+.header {
+  background-color: #64ccc5;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 1em 2em;
+  gap: 2em;
+}
+
+.search-container {
+  display: flex;
+  gap: 1em;
+  grid-column: 1 / 2;
+  cursor: pointer;
+  align-items: center;
+}
+
+.search-container input {
+  width: 600px;
+  padding: 0.5em;
+  border-radius: 10px;
+  height: 35px;
+}
+
+.search-container input:focus {
+  outline: 0;
+}
+
+.notif-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  justify-self: end;
+}
+
+.notif-container > * {
+  cursor: pointer;
+}
+
+.profile-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.notif-img {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.notif-container p {
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.profile-container img {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.profile-container > * {
+  cursor: pointer;
+}
+
+.greet-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.1em;
+  font-weight: 900;
+}
+
+.greet-profile p:nth-child(1) {
+  font-size: 0.8em;
+}
+
+.greet-profile p:nth-child(2) {
+  font-size: 1.3em;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: end;
+}
+
+.button {
+  background-color: #001c30;
+  color: white;
+  border-radius: 1em;
+  padding: 0.4em 1.3em;
+  cursor: pointer;
+}
+
+.main {
+  background-color: #176b87;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 2em 1em;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+}
+
+.main h1 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: white;
+}
+
+.project {
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  border-left: 10px solid #001c30;
+}
+
+.projects-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.projects {
+  grid-row: 1 / 3;
+}
+
+.projects h2 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 1em;
+
+  margin-top: 2em;
+  justify-content: end;
+}
+
+.project-links > * {
+  cursor: pointer;
+}
+
+.announcements {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.announcements-container {
+  padding: 1em 2em;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.announcement + .announcement {
+  margin-top: 1em;
+  border-top: 1px solid black;
+  padding-top: 1em;
+}
+
+.trendings {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.trendings-container {
+  padding: 1em 2em;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.trend img {
+  background-color: lightgray;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.trend {
+  display: flex;
+  gap: 1em;
+}
+
+.trend + .trend {
+  margin-top: 1em;
+}
+
+.trend-container p:nth-child(1) {
+  font-weight: 700;
+}
